@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+}
+
+.btn-left {
+    width: 60px;
+    height: 70px;
+    background-color: #D5966C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-right {
+    width: 200px;
+    height: 70px;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3.64px;
+    line-height: 23.94px;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    height: max-content;
+    background-color: #151515;
+    padding: 48px 16px 48px 16px;
+}
+
+.content h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 45px;
+    padding-bottom: 40px;
+}
+
+.content h2 {
+    color: #D5966C;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 32px;
+    padding-bottom: 30px;
+}
+
+.content p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.location-para {
+    padding-bottom: 30px;
+}
+
+footer {
+    width: 100%;
+    height: max-content;
+    background-color: #D5966C;
+    padding: 48px 32px 48px 32px;
+}
+
+.dark-logo {
+    padding-bottom: 30px;
+}
+
+footer p {
+    padding-bottom: 30px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #151515;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.map-mobile {
+    width: -webkit-fill-available;
+}
+
+.map-tablet {
+    display: none;
+}
+
+.map-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .map-mobile {
+        display: none;
+    }
+
+    .map-tablet {
+        display: block;
+        width: -webkit-fill-available;
+    }
+
+    header {
+        left: 35px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        padding: 90px 42px 90px 42px;
+        gap: 80px;
+    }
+
+    footer {
+        display: flex;
+        gap: 110px;
+        padding: 40px 42px 40px 42px;
+    }
+
+    .social-icons {
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .map-tablet {
+        display: none;
+    }
+
+    .map-desktop {
+        display: block;
+        width: -webkit-fill-available;
+    }
+
+    header {
+        padding-left: 10%;
+        left: 0
+    }
+
+    .content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    h1 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    footer {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 7%;
+    }
+
+    footer p {
+        width: 40%;
+    }
+
+    .social-icons {
+        width: 30%;
+        justify-content: flex-end;
+    }
+
+    .btn-right:hover {
+        background: #d5966c;
+        cursor: pointer;
+    }
+    
+    .btn-right:hover ~ .btn-left {
+        background: #151515;
+      }
+
+    .social-icons svg:hover path {
+        fill: #FFFFFF;
+        cursor: pointer;
+        transition-duration: .5s;
+    }
+}
